@@ -2,14 +2,26 @@
 <html>
   <head>
     <meta charset="utf8" />
-    <title>Depot</title>
+    <title>Pragprog Books Online Store</title>
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
   <body class="<%= controller.controller_name %>">
-
-  <%= yield %>
-
+    <header id="banner">
+      <%= image_tag("logo.png") %>
+      <%= @page_title || "Pragmatic Bookshelf" %>
+    </header>
+    <div id="columns">
+      <nav id="side">
+        <ul>
+            <li><a href="/">Listing</a></li>
+            <li><a href="/products">Administration</a></li>
+        </ul> 
+      </nav>
+      <section id="main" role="main">
+          <%= yield %>
+      </section>
+    </div>
   </body>
 </html>
