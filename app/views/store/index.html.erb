@@ -13,7 +13,7 @@
     <%= sanitize(product.description) %>
     <div class="price_line">
       <span class="price">
-        <%= number_to_currency(product.price) %>
+        <%= number_to_currency(product.price, :unit => "kr", :separator => ",", :delimiter => " ", :precision => 0, :format => "%n %u") %>
       </span>
     </div>
 
