@@ -18,6 +18,7 @@
             <li><a href="/">Listing</a></li>
             <li><a href="/products">Administration</a></li>
         </ul> 
+        <small style="color: white;">Page rendered: <%= Time.now.to_s("%F %T") %></small>
       </nav>
       <section id="main" role="main">
           <%= yield %>
