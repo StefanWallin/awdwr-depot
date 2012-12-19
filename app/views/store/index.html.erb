@@ -3,7 +3,7 @@
     <%= notice %>
   </p>
 <% end %>
-<%= session[:count] %>
+<p>You've accessed this controller <%= pluralize(session[:count], "time") %></p>
 <h1>Your Pragmatic Catalog</h1>
 
 <% @products.each do |product| %>
