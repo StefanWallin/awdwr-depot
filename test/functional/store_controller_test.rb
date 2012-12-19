@@ -7,6 +7,6 @@ class StoreControllerTest < ActionController::TestCase
     assert_select '#columns #side a', minimum: 2
     assert_select '#main .entry', 4
     assert_select 'h3', 'The Pragmatic Programmer - From journeyman to master'
-    assert_select '.price', /\$[,\d]+\.\d\d/
+    assert_select '.price', /[,\d]+ kr/
   end
 end
