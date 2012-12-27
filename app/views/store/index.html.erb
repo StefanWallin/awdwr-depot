@@ -3,7 +3,9 @@
     <%= notice %>
   </p>
 <% end %>
-<p>You've accessed this controller <%= pluralize(session[:count], "time") %></p>
+<% if session[:count] > 5 %>
+  <p>You've accessed this controller <%= pluralize(session[:count], "time") %></p>
+<% end %>
 <h1>Your Pragmatic Catalog</h1>
 
 <% @products.each do |product| %>
